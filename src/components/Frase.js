@@ -1,20 +1,17 @@
 import React from "react";
 import { Card } from "react-bootstrap";
 
-const Frase = () => {
+const Frase = (props) => {
   return (
     <Card>
       <Card.Body>
         <div className="row">
           <div className="col-12 col-md-4">
-            <img src="" alt="" />
+            <img src={props.personaje.image} alt={props.personaje.character} />
           </div>
           <div className="col-12 col-md-8">
-            <Card.Title>Card Title</Card.Title>
-            <Card.Text>
-              Some quick example text to build on the card title and make up the
-              bulk of the card's content.
-            </Card.Text>
+            <Card.Title>{props.personaje.character}</Card.Title>
+            <Card.Text>{props.personaje.quote}</Card.Text>
           </div>
         </div>
       </Card.Body>
